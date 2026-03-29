@@ -48,7 +48,7 @@ public class RestaurantBillingSystem {
         double price = sc.nextDouble();
 
         menu.add(new MenuItem(id, name, price));
-        System.out.println("✅ Item Added!");
+        System.out.println("Item Added!");
     }
 
     // Display Menu
@@ -76,7 +76,7 @@ public class RestaurantBillingSystem {
         }
 
         if (selected == null) {
-            System.out.println("❌ Item not found!");
+            System.out.println("Item not found!");
             return;
         }
 
@@ -84,7 +84,7 @@ public class RestaurantBillingSystem {
         int qty = sc.nextInt();
 
         order.add(new OrderItem(selected, qty));
-        System.out.println("✅ Added to order!");
+        System.out.println("Added to order!");
     }
 
     // Remove Order
@@ -95,9 +95,9 @@ public class RestaurantBillingSystem {
         boolean removed = order.removeIf(o -> o.item.id == id);
 
         if (removed)
-            System.out.println("✅ Item removed!");
+            System.out.println("Item removed!");
         else
-            System.out.println("❌ Item not found in order!");
+            System.out.println("Item not found in order!");
     }
 
     // Generate Bill
@@ -153,7 +153,7 @@ public class RestaurantBillingSystem {
                     System.out.println("Thank you!");
                     System.exit(0);
                 default:
-                    System.out.println("❌ Invalid choice!");
+                    System.out.println("Invalid choice!");
             }
         }
     }
